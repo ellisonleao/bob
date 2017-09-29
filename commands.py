@@ -49,17 +49,3 @@ def dolar(client, channel, args):
     msg = f'O valor do dólar atual é *{quotation}*'
     return client.api_call('chat.postMessage', channel=channel, text=msg,
                            as_user=True)
-
-
-def calcular(client, channel, args):
-    """calcula o resultado de uma expressão"""
-    calculation = ''.join(args)
-    try:
-        msg = eval(calculation)
-    except Exception as e:
-        print(e)
-        return client.api_call('chat.postMessage', channel=channel,
-                               text='Não funcionou', as_user=True)
-
-    return client.api_call('chat.postMessage', channel=channel, text=msg,
-                           as_user=True)
