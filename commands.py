@@ -1,0 +1,4 @@
+import requests
+
+
+# VAMOS IMPLEMENTAR MAIS FUNCOES!
